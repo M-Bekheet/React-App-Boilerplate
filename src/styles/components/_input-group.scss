@@ -1,0 +1,23 @@
+.input-group{
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+  &__item{
+    margin-right: $s-size;
+  }
+}
+
+ @media(max-width: $desktop-breakpoint){
+   .input-group{
+     flex-direction: column;
+     margin: $s-size auto;
+     &__item{
+       margin: $s-size 0 0;
+       input, select{
+         margin: 0;
+         padding: $s-size;
+         height: 55px;
+       }
+     }
+   }
+}
