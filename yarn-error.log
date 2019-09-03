@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Mahmoud\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add history@4.7.2
+  C:\Program Files\nodejs\node.exe C:\Users\Mahmoud\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react@latest react-dom@latest react-test-renderer@latest enzyme@latest enzyme-adapter-react@latest enzyme-to-json@latest raf@latest
 
 PATH: 
   C:\Users\Mahmoud\bin;E:\Geeksome\Tools\command-line\cmder\bin;E:\Geeksome\Tools\command-line\cmder\vendor\bin;C:\Program Files\Git\bin;E:\Geeksome\Tools\command-line\cmder\vendor\git-for-windows\mingw64\bin;E:\Geeksome\Tools\command-line\cmder\vendor\git-for-windows\usr\local\bin;E:\Geeksome\Tools\command-line\cmder\vendor\git-for-windows\usr\bin;E:\Geeksome\Tools\command-line\cmder\vendor\git-for-windows\usr\bin;E:\Geeksome\Tools\command-line\cmder\vendor\git-for-windows\mingw64\bin;E:\Geeksome\Tools\command-line\cmder\vendor\git-for-windows\usr\bin;C:\Users\Mahmoud\bin;E:\Geeksome\Tools\command-line\cmder\vendor\conemu-maximus5\ConEmu\Scripts;E:\Geeksome\Tools\command-line\cmder\vendor\conemu-maximus5;E:\Geeksome\Tools\command-line\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\System32\OpenSSH;C:\Program Files\PuTTY;C:\Program Files\nodejs;C:\Users\Mahmoud\AppData\Local\Microsoft\WindowsApps;C:\bin\Cmder;C:\Program Files\heroku\bin;C:\Users\Mahmoud\AppData\Roaming\npm;E:\Geeksome\Tools\command-line\cmder;E:\Geeksome\Tools\command-line\cmder\vendor\git-for-windows\usr\bin\vendor_perl;E:\Geeksome\Tools\command-line\cmder\vendor\git-for-windows\usr\bin\core_perl
@@ -14,15 +14,24 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'E:\workspace\React-Projects\expensify-old\node_modules\node-sass\vendor\win32-x64-57\binding.node'
+  Error: https://registry.yarnpkg.com/enzyme-adapter-react: Not found
+      at Request.params.callback [as _callback] (C:\Users\Mahmoud\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66830:18)
+      at Request.self.callback (C:\Users\Mahmoud\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140464:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (C:\Users\Mahmoud\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141436:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (C:\Users\Mahmoud\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141358:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
 
 npm manifest: 
   {
-    "name": "expensify",
+    "name": "react-app-bolierplate",
     "version": "1.0.0",
     "main": "index.js",
     "author": "Mahmoud Ahmed",
-    "homepage": "E:/workspace/React-Projects/expensify/public/",
     "license": "MIT",
     "scripts": {
       "build:dev": "webpack",
@@ -36,12 +45,14 @@ npm manifest:
       "babel-loader": "7.1.1",
       "babel-plugin-transform-class-properties": "6.24.1",
       "babel-plugin-transform-object-rest-spread": "6.23.0",
+      "babel-polyfill": "6.26.0",
       "babel-preset-env": "1.5.2",
       "babel-preset-react": "6.24.1",
       "css-loader": "0.28.4",
       "express": "4.15.4",
       "extract-text-webpack-plugin": "3.0.0",
       "firebase": "^6.4.2",
+      "history": "^4.7.2",
       "moment": "2.18.1",
       "node-sass": "4.5.3",
       "normalize.css": "7.0.0",
@@ -1168,6 +1179,15 @@ Lockfile:
     dependencies:
       babel-runtime "^6.22.0"
       babel-types "^6.24.1"
+  
+  babel-polyfill@6.26.0:
+    version "6.26.0"
+    resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
+    integrity sha1-N5k3q8Z9eJWXCtxiHyhM2WbPIVM=
+    dependencies:
+      babel-runtime "^6.26.0"
+      core-js "^2.5.0"
+      regenerator-runtime "^0.10.5"
   
   babel-polyfill@^6.23.0:
     version "6.23.0"
@@ -5838,7 +5858,7 @@ Lockfile:
     version "1.3.2"
     resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.3.2.tgz#d1941c67bad437e1be76433add5b385f95b19260"
   
-  regenerator-runtime@^0.10.0:
+  regenerator-runtime@^0.10.0, regenerator-runtime@^0.10.5:
     version "0.10.5"
     resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
   
